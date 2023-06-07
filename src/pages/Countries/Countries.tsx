@@ -10,7 +10,7 @@ export const Countries = () => {
   if (isLoading) {
     return <LoadingDiv><SyncLoader color="#000" /></LoadingDiv>
   }
-
+  
   return (
     <MainContainer>
       <LayoutContainer>

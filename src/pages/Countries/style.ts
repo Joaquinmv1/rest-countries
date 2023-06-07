@@ -68,4 +68,12 @@ export const LoadingDiv = styled.div`
   min-height: 100vh;
   background-color: ${({ theme }) => theme.color.background};
   color: ${({ theme }) => theme.color.text};
-` 
+`
+
+export const NoCountries = styled.div`
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+  text-align: center;
+  color:${({ theme }) => theme.color.text};
+`

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CountrieDetail, CountriesItems, CountriesList } from "../../pages/Countries"
+import { CountrieDetail, CountriesItems, CountriesList, NoCountries } from "../../pages/Countries"
 import { Country } from "../../types/types"
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 export const CountriesCard = ({ countries, isLoading, }: Props) => (
   <article>
     <CountriesList>
-      {!isLoading && countries.map((country: Country, i: number) => (
+      {!isLoading && countries.length > 0 ? countries.map((country: Country, i: number) => (
         <Link to={`countrie/${country.name.common}`} key={i}>
           <CountriesItems>
             <CountrieDetail>
@@ -25,7 +25,7 @@ export const CountriesCard = ({ countries, isLoading, }: Props) => (
               </div>
             </CountrieDetail>
           </CountriesItems>
-        </Link>))}
+        </Link>)) : <NoCountries>No countries matching your search criteria were found...</NoCountries>}
     </CountriesList>
   </article>
 )
