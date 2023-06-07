@@ -10,16 +10,18 @@ interface Props {
 export const CountriesCard = ({ countries, isLoading, }: Props) => (
   <article>
     <CountriesList>
-      {!isLoading && countries.map((countrie: Country, i: number) => (
-        <Link to={`countrie/${countrie.name.common}`} key={i}>
+      {!isLoading && countries.map((country: Country, i: number) => (
+        <Link to={`countrie/${country.name.common}`} key={i}>
           <CountriesItems>
             <CountrieDetail>
-              <img src={countrie.flags.png} alt="" />
+              <img src={country.flags.png} alt="" />
               <div className="country-info">
-                <h2>{countrie.name.common}</h2>
-                <p>Population: <span>{countrie.population}</span></p>
-                <p>Region: <span>{countrie.region}</span> </p>
-                <p>Capital: <span>{countrie.capital}</span> </p>
+                <h2>{country.name.common}</h2>
+                <p>Population: <span>{country.population}</span></p>
+                <p>Region: <span>{country.region}</span> </p>
+                {country.capital && country.capital.length > 0 && (
+                  <p>Capital: <span>{country.capital}</span> </p>
+                )}
               </div>
             </CountrieDetail>
           </CountriesItems>

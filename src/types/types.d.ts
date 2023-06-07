@@ -15,7 +15,7 @@ export interface Country {
   }
   population: number
   region: string
-  capital?: string
+  capital: string
   subregion?: string
   tld?:string
   currencies?: Array

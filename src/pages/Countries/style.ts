@@ -43,7 +43,8 @@ export const CountriesItems = styled.li`
 export const CountrieDetail = styled.article`
   background-color: ${({ theme }) => theme.color.elements};
   padding-bottom:1rem;
-  
+  height: 380px;
+
   & p{
     color: ${({ theme }) => theme.color.text};
     font-weight: bold;
