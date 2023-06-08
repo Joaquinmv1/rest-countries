@@ -5,8 +5,8 @@ Rest Countries is a Frontend Mentor project implemented using TypeScript, React,
 ## Preview
 ---
 
-![preview Rest-Countries1](https://imgur.com/HDcfpwX)
-![preview Rest-Countries2](https://imgur.com/CvH5ttX)
+![preview Rest-Countries1](https://imgur.com/HDcfpwX.png)
+![preview Rest-Countries2](https://imgur.com/CvH5ttX.png)
 
 ## Deploy
 [Rest-Countries](https://rest-countries-sigma-one.vercel.app)
